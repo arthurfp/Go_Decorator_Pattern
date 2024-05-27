@@ -1,9 +1,11 @@
 package main
 
 import (
+	"decorator-pattern-go/pkg/decorator"
 	"fmt"
 )
 
 func main() {
-	fmt.Println("Decorator Pattern Example")
+	component := decorator.ConcreteComponent{}
+	fmt.Println(component.Operation())
 }
