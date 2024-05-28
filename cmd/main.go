@@ -7,5 +7,8 @@ import (
 
 func main() {
 	component := decorator.ConcreteComponent{}
-	fmt.Println(component.Operation())
+	fmt.Println("ConcreteComponent Operation:", component.Operation())
+
+	decorator := decorator.NewDecorator(&component)
+	fmt.Println("Decorator Operation:", decorator.Operation())
 }
