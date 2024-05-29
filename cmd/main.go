@@ -9,6 +9,9 @@ func main() {
 	component := decorator.ConcreteComponent{}
 	fmt.Println("ConcreteComponent Operation:", component.Operation())
 
-	decorator := decorator.NewDecorator(&component)
-	fmt.Println("Decorator Operation:", decorator.Operation())
+	decoratorA := decorator.NewDecoratorA(&component)
+	fmt.Println("DecoratorA Operation:", decoratorA.Operation())
+
+	decoratorB := decorator.NewDecoratorB(decoratorA)
+	fmt.Println("DecoratorB Operation:", decoratorB.Operation())
 }
